@@ -1,16 +1,16 @@
 import React from 'react'
-import { height } from 'window-size';
 
 class Pixel extends React.Component {
   constructor (props) {
-    super (props)
+    super(props)
+    this.state = {style: {backgroundColor: 'cornflowerblue', height: '100px', width: '100px', display: 'inline'}}
   }
 
   render () {
     return (
-      <div style={{backgroundColor: 'blue', height: '100px', width: '100px', position: 'absolute'}}> Try me</div>
+      <div style={this.state.style}></div>
     )
   }
 }
 
-export default Pixel 
+export default Pixel

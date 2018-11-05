@@ -9,8 +9,12 @@ class App extends React.Component {
   render () {
     return (
       <div id='app'>
-        <div>yup</div>
-        <div><Pixel /> </div>
+        <div><Pixel /></div>
+        <div><Pixel /></div>
+        <div><Pixel /></div>
+        <div><Pixel /></div>
+        <div><Pixel /></div>
+        
       </div>
     )
   }
