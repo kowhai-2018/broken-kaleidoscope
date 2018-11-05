@@ -6,15 +6,18 @@ class App extends React.Component {
     super(props)
   }
 
+  addColor (num) {
+    let print = []
+    for (let i = 0; i < num; i++) {
+      print.push(<Pixel />)
+    }
+    return print
+  }
+
   render () {
     return (
       <div id='app'>
-        <div><Pixel /></div>
-        <div><Pixel /></div>
-        <div><Pixel /></div>
-        <div><Pixel /></div>
-        <div><Pixel /></div>
-        
+        {this.addColor(100)}
       </div>
     )
   }
