@@ -39,9 +39,57 @@ class Pixel extends React.Component {
     })
   }
 
+  mouseEnter = () => {
+    this.setState({
+      style: {
+        fontFamily: 'Times New Roman',
+        height: '60px',
+        width: '60px',
+        backgroundColor: 'green'
+      }
+      
+    })
+  }
+
+  rightClick = () => {
+    this.setState({
+      style: {
+        fontFamily: 'Times New Roman',
+        height: '60px',
+        width: '60px',
+        backgroundColor: 'black'
+      }
+      
+    })
+  }
+
+  doubleClick = () => {
+    this.setState({
+      style: {
+        fontFamily: 'Times New Roman',
+        height: '60px',
+        width: '60px',
+        backgroundColor: 'white'
+      }
+      
+    })
+  }
+
+  dragEnter = () => {
+    this.setState({
+      style: {
+        fontFamily: 'Times New Roman',
+        height: '60px',
+        width: '60px',
+        backgroundColor: 'yellow'
+      }
+      
+    })
+  }
+
   render () {
     return (
-      <div onClick={this.clickHandler} style={this.state.style}></div>
+      <div onClick={this.clickHandler} onMouseEnter={this.mouseEnter} onContextMenu={this.rightClick} onDoubleClick={this.doubleClick} onDragEnter={this.dragEnter} style={this.state.style}></div>
     )
   }
 }
