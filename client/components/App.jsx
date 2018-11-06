@@ -2,8 +2,8 @@ import React from 'react'
 import Pixel from './Pixel.jsx'
 
 class App extends React.Component {
-  state = {
-    visible: true
+  constructor (props) {
+    super(props)
 }
 
   generatePixel (num) {
@@ -14,20 +14,10 @@ class App extends React.Component {
     return print
   }
 
-  clickHandler = (evt) => {
-    this.setState({
-      visible: false
-    })
-  }
-
   render () {
     return (
       <div id='app'>
-        {this.generatePixel(100)}
-        
-          <button onClick={this.clickHandler}>HIDE ME</button>
-          {this.state.visible && <Pixel />}
-      
+        {this.generatePixel(1000)}
       </div>
     )
   }
