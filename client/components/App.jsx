@@ -1,41 +1,12 @@
 import React from 'react'
 import Pixel from './Pixel'
+const _ = require('lodash')
 
 const App = () => {
-  return (
-    <div>
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-    </div>
-  )
+  const loop = _.times(10000, () => {
+    return <Pixel />
+  })
+  return loop
 }
 
 export default App

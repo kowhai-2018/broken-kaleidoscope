@@ -11,6 +11,9 @@ import React from 'react'
 //   )
 // }
 
+const height = 3
+const width = height
+
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
@@ -21,8 +24,8 @@ class Pixel extends React.Component {
     this.state = {
       style: {
         fontFamily: 'Times New Roman',
-        height: '60px',
-        width: '60px',
+        height,
+        width,
         backgroundColor: randomHexColor()
       }}    
   }
@@ -31,8 +34,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         fontFamily: 'Times New Roman',
-        height: '60px',
-        width: '60px',
+        height,
+        width,
         backgroundColor: randomHexColor()
       }
       
@@ -43,8 +46,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         fontFamily: 'Times New Roman',
-        height: '60px',
-        width: '60px',
+        height,
+        width,
         backgroundColor: 'green'
       }
       
@@ -55,8 +58,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         fontFamily: 'Times New Roman',
-        height: '60px',
-        width: '60px',
+        height,
+        width,
         backgroundColor: 'black'
       }
       
@@ -67,8 +70,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         fontFamily: 'Times New Roman',
-        height: '60px',
-        width: '60px',
+        height,
+        width,
         backgroundColor: 'white'
       }
       
@@ -79,8 +82,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         fontFamily: 'Times New Roman',
-        height: '60px',
-        width: '60px',
+        height,
+        width,
         backgroundColor: 'yellow'
       }
       
