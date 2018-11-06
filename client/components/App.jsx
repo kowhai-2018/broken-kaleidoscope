@@ -3,7 +3,7 @@ import Pixel from './Pixel'
 const _ = require('lodash')
 
 const App = () => {
-  const loop = _.times(10000, () => {
+  const loop = _.times(100, () => {
     return <Pixel />
   })
   return loop

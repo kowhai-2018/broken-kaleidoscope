@@ -11,11 +11,12 @@ import React from 'react'
 //   )
 // }
 
-const height = 3
+const height = 20
 const width = height
 
-const randomHexColor = () =>
-  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+const randomHexColor = () => 
+   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+
 
 class Pixel extends React.Component {
   constructor (props) {
@@ -28,6 +29,19 @@ class Pixel extends React.Component {
         width,
         backgroundColor: randomHexColor()
       }}    
+      setInterval(this.changeColor, 1)
+  }
+
+  changeColor = () => {
+    this.setState({
+      style: {
+        fontFamily: 'Times New Roman',
+        height,
+        width,
+        backgroundColor: randomHexColor()
+      }
+      
+    })
   }
 
   clickHandler = () => {
