@@ -9,10 +9,14 @@ class Pixel extends React.Component {
     this.state = {style: {backgroundColor: randomHexColor(), height: '100px', width: '100px', display: 'inline'}}
   }
 
+  clickHandler = (evt) => {
+    this.setState({style: {backgroundColor: randomHexColor(), height: '100px', width: '100px', display: 'inline'}})
+  }
+
   render () {
     return (
       <div>
-        <div style={this.state.style}></div>
+        <div style={this.state.style} onClick={this.clickHandler}></div>
       </div>
     )
   }

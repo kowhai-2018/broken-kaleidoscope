@@ -1,6 +1,5 @@
 import React from 'react'
 import Pixel from './Pixel.jsx'
-import { Z_FIXED } from 'zlib';
 
 class App extends React.Component {
   state = {
