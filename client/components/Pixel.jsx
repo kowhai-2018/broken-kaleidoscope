@@ -3,7 +3,7 @@ import React from 'react'
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
-const width = 100
+const width = 10
 const height = width
 
 class Pixel extends React.Component {
