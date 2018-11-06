@@ -3,6 +3,9 @@ import React from 'react'
 const randomHexColor = () => 
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
+const height = 150
+const width = height
+
 class Pixel extends React.Component {
   constructor (props) {
     super(props)
@@ -10,9 +13,8 @@ class Pixel extends React.Component {
       style: {
         fontFamily: 'Times New Roman',
         backgroundColor: randomHexColor(),
-        height: '50px',
-        width: '50px'
-      }
+        height, width
+        }
     }
   }
   clickHandler = evt => {
@@ -20,8 +22,7 @@ class Pixel extends React.Component {
       style: {
         fontFamily: 'Times New Roman',
         backgroundColor: randomHexColor(),
-        height: '50px',
-        width: '50px'
+        height, width
       }
     })
   }
@@ -31,8 +32,7 @@ class Pixel extends React.Component {
       style: {
         fontFamily: 'Times New Roman',
         backgroundColor: 'green',
-        height: '50px',
-        width: '50px'
+        height, width
       }
     })
   }
@@ -42,8 +42,7 @@ class Pixel extends React.Component {
       style: {
         fontFamily: 'Times New Roman',
         backgroundColor: 'black',
-        height: '50px',
-        width: '50px'
+        height, width
       }
     })
   }
@@ -53,8 +52,7 @@ class Pixel extends React.Component {
       style: {
         fontFamily: 'Times New Roman',
         backgroundColor: 'white',
-        height: '50px',
-        width: '50px'
+        height, width
       }
     })
   }
@@ -64,8 +62,7 @@ class Pixel extends React.Component {
       style: {
         fontFamily: 'Times New Roman',
         backgroundColor: 'yellow',
-        height: '50px',
-        width: '50px'
+        height, width
       }
     })
   }
@@ -76,7 +73,7 @@ class Pixel extends React.Component {
       onDragEnter={this.dragEnter} 
       onDoubleClick={this.doubleClick} 
       onMouseEnter={this.mouseEnter} 
-      onClick={this.clickHandler} 
+      onClick={setInterval(this.clickHandler,1000)} 
       onContextMenu={this.contextMenu} 
       style={this.state.style}>
       </div>

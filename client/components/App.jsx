@@ -10,9 +10,15 @@ function fillArray(value, length) {
   return arr
 }
 
+
+let x = fillArray(<Pixel/>, 75)
+
+// setInterval(render, 1000)
+
 class App extends React.Component {
+  
   render () {
-    return fillArray(<Pixel/>, 1000)
+    return x
   }
 }
 
