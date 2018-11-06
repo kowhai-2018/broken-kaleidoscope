@@ -11,10 +11,11 @@ class Pixel extends React.Component {
 
   render () {
     return (
-      <div style={this.state.style}></div>
+      <div>
+        <div style={this.state.style}></div>
+      </div>
     )
   }
 }
-
 
 export default Pixel

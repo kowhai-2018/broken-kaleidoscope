@@ -1,12 +1,13 @@
 import React from 'react'
-import Pixel from './color.jsx'
+import Pixel from './Pixel.jsx'
+import { Z_FIXED } from 'zlib';
 
 class App extends React.Component {
-  constructor (props) {
-    super(props)
-  }
+  state = {
+    visible: true
+}
 
-  addColor (num) {
+  generatePixel (num) {
     let print = []
     for (let i = 0; i < num; i++) {
       print.push(<Pixel />)
@@ -14,10 +15,20 @@ class App extends React.Component {
     return print
   }
 
+  clickHandler = (evt) => {
+    this.setState({
+      visible: false
+    })
+  }
+
   render () {
     return (
       <div id='app'>
-        {this.addColor(100)}
+        {this.generatePixel(100)}
+        
+          <button onClick={this.clickHandler}>HIDE ME</button>
+          {this.state.visible && <Pixel />}
+      
       </div>
     )
   }
