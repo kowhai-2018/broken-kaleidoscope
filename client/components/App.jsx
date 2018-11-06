@@ -1,24 +1,15 @@
 import React from 'react'
 import Pixel from './Pixel'
 
-
-function fillArray(value, length) {
-  const arr = []
-  for (let i = 0; i < length; i++) {
-    arr.push(value)
-  }
+function fillArray (value, length) {
+  let arr = Array.from({length: 75}, (v, i) => <Pixel/>)
   return arr
 }
 
 
-let x = fillArray(<Pixel/>, 75)
-
-// setInterval(render, 1000)
-
 class App extends React.Component {
-  
   render () {
-    return x
+    return fillArray()
   }
 }
 
