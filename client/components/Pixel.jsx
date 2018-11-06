@@ -14,9 +14,11 @@ class Pixel extends React.Component {
         width,
         height,
         backgroundColor: randomHexColor()
+      },
+      update: setInterval(this.clickHandler, 1000)
     }
   }
-  }
+
   changeColour = () => {
     const style = {
       width,
@@ -24,6 +26,7 @@ class Pixel extends React.Component {
       backgroundColor: randomHexColour()
     }
   }
+
 clickHandler = evt => {
   this.setState({
     style: {
@@ -42,6 +45,7 @@ render () {
        onMouseEnter={this.clickHandler}
        style={style} />
     )
+  }
 }
-}
+
 export default Pixel
