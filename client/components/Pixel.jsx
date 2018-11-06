@@ -9,7 +9,8 @@ const randomHexColor = () =>
 class Pixel extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {style: {backgroundColor: randomHexColor(), height, width, display: 'inline'}}
+    this.state = {style: {backgroundColor: randomHexColor(), height, width, display: 'inline'},
+  stay:setInterval(this.clickHandler, 1000)}
   }
 
   clickHandler = (evt) => {
@@ -24,9 +25,9 @@ class Pixel extends React.Component {
     this.setState({style: {backgroundColor: 'black', height, width, display: 'inline'}})
   }
 
-  // onDragEnterHandler = (evt) => {
-  //   this.setState({style: {backgroundColor: 'red', height, width, display: 'inline'}})
-  // }
+  onDragEnterHandler = (evt) => {
+    this.setState({style: {backgroundColor: 'red', height, width, display: 'inline'}})
+  }
   
 
 
@@ -37,8 +38,8 @@ class Pixel extends React.Component {
         <div style={this.state.style} 
         onContextMenu={this.onContextMenuHandler} 
         onClick={this.clickHandler} 
-        onMouseEnter={this.onMouseEnterHandler}>
-        {/* onDragEnter={this.onDragEnterHandler} */}
+        onMouseEnter={this.onMouseEnterHandler}
+        onDragEnter={this.onDragEnterHandler}>
         </div>
       </div>
     )
