@@ -11,7 +11,7 @@ import React from 'react'
 //   )
 // }
 
-const height = 20
+const height = 35
 const width = height
 
 const randomHexColor = () => 
