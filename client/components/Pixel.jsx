@@ -25,7 +25,7 @@ class Pixel extends React.Component {
   }
 
   // onDragEnterHandler = (evt) => {
-  //   this.setState({style: {backgroundColor: 'red'}})
+  //   this.setState({style: {backgroundColor: 'red', height, width, display: 'inline'}})
   // }
   
 
@@ -38,7 +38,7 @@ class Pixel extends React.Component {
         onContextMenu={this.onContextMenuHandler} 
         onClick={this.clickHandler} 
         onMouseEnter={this.onMouseEnterHandler}>
-        {/* onDragEnter={this.onDragEnter} */}
+        {/* onDragEnter={this.onDragEnterHandler} */}
         </div>
       </div>
     )
